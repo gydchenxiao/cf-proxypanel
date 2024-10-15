@@ -93,6 +93,7 @@ pre {
 
 #container{
   display: grid;
-  grid-template-areas: "a a";
+  grid-template-columns: repeat(2, 1fr); /* 设置两列的布局 */
+  gap: 10px; /* 设置图片之间的间距 */
 }
 </style>
