@@ -1,10 +1,10 @@
 <template>
   <div class="container">
-    <h3>1. 打开我们制作的蓝波加速器，刚打开会自动更新免费节点，代理节点使用了Cloudflare优选反代IP。</h3>
+    <h3>1. 打开我们制作的蓝波加速器，刚打开会自动更新免费节点，代理节点使用了Cloudflare优选反代IP。蓝波加速器里面内置了我们部署的免费代理节点订阅url链接，优选ip使用了CMliu频道的sub。</h3>
     <img src="https://pic.imgdb.cn/item/670a3524d29ded1a8ca3bcc3.jpg" style="width: 300px; height: 650px;">
     <h3>2. 测试全部配置真连接，大部分情况下真连接比Tcping更准确，真连接通可以连接外网，因为tcping只发SYN，真连接包括代理的数据。</h3>
     <img src="https://pic.imgdb.cn/item/670a36aad29ded1a8ca5bf9d.jpg" style="width: 300px; height: 650px;">
-    <h3>3. 如果Cloudflare反代IP节点不稳定或者失效，可以导入自定义的节点。</h3>
+    <h3>3. 如果Cloudflare反代IP节点不稳定或者失效，可以导入自定义的节点。自定义的节点是Cloudflare Workers搭建单独的节点，使用了Cloudflare的优选域名，延迟低并且稳定，不足的地方是访问Cloudflare代理的网站会有些慢，但是访问Github，谷歌学术等大厂网站很快。</h3>
     <img src="https://pic.imgdb.cn/item/670a4a86d29ded1a8cbcc360.jpg" style="width: 300px; height: 650px;">
     <h3>4. 复制下面这段代码，粘贴到自定义列表里会显示代理节点。</h3>
     <div class="text-container">
@@ -14,12 +14,17 @@
     <img src="https://pic.imgdb.cn/item/670a4c18d29ded1a8cbee447.jpg" style="width: 300px; height: 650px;">
     <br>
     <h3>5. 效果展示</h3>
+    <div id="container">
     <img src="https://pic.imgdb.cn/item/670a6218d29ded1a8cd9a999.jpg" style="width: 300px; height: 650px;">
+    <img src="https://pic.imgdb.cn/item/670e5de0d29ded1a8c3e41e2.jpg" style="width: 300px; height: 650px;">
+    <img src="https://pic.imgdb.cn/item/670e5eacd29ded1a8c3f0208.jpg" style="width: 300px; height: 650px;">
+    </div>
+      
     <br>
     <h3>6. 从后台退出蓝波加速器，关闭代理。</h3>
     <img src="https://pic.imgdb.cn/item/670b6c2fd29ded1a8cc36b08.jpg" style="width: 300px; height: 650px;">
     <br>
-    <h3>或者使用第三方代理软件V2rayNG订阅手动导入订阅URL，勾选启用更新，订阅生成代理节点。</h3>
+    <h3>或者使用第三方代理软件V2rayNG订阅手动导入订阅URL，复制下面的订阅地址，下面订阅地址url链接就是首页仪表盘里捷径里一键订阅里的复制订阅地址，记住勾选启用更新，然后更新订阅即可生成代理节点。</h3>
     <div class="text-container1">
       <button class="copy-button" @click="copyText(vlessurl)">复制</button>
       <pre>{{ vlessurl }}</pre>
@@ -84,5 +89,11 @@ pre {
   white-space: pre-wrap;
   word-wrap: break-word;
   margin: 0;
+}
+
+#container{
+  display: grid;
+  grid-template-areas: "a a";
+  grid-gap: 5px;
 }
 </style>
