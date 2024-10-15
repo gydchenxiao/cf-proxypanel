@@ -94,6 +94,5 @@ pre {
 #container{
   display: grid;
   grid-template-areas: "a a";
-  grid-gap: 5px;
 }
 </style>
